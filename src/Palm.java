@@ -1,5 +1,5 @@
 public class Palm extends Plant {
-    private static final double WATER_RATE = 0.5;
+    private static final WaterRate waterRate = WaterRate.PALM;
 
     public Palm(String name, double height) {
         super(name, height);
@@ -7,7 +7,7 @@ public class Palm extends Plant {
 
     @Override
     public double calculateDailyWater() {
-        return WATER_RATE * height;
+        return waterRate.rate() * height;
     }
 
     @Override
